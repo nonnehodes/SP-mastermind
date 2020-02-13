@@ -1,1 +1,1 @@
-print('Hello mastermind')
+print("Welkom bij Mastermind")
