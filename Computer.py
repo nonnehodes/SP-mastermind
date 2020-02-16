@@ -2,6 +2,7 @@ import time
 import random
 from Feedback import feedback
 
+
 def computer():
     password = []
     secret = input("Maak een geheime code aan met 4 getallen tussen de 1 en 6: ")
@@ -20,7 +21,7 @@ def computer():
     clean_list = mogelijkheden[:]
     pogingen = 0
     for i in mogelijkheden:
-        pogingen = pogingen + 1 # telt onjuist
+        pogingen = pogingen + 1  # telt onjuist
         eerste_gok = random.choice(mogelijkheden)
         eerste_feedback = feedback(eerste_gok, secret_list)
         verg_feedback = feedback(i, eerste_gok)
@@ -28,11 +29,10 @@ def computer():
             clean_list.remove(i)
         else:
             time.sleep(1)
-            print("geraden in", pogingen, "poging(en)")
+            print("Geraden in", pogingen, "poging(en).")
             time.sleep(1)
             break
     if pogingen > 10:
-        print("U heeft gewonnen")
+        print("U heeft gewonnen!")
     if pogingen < 11:
-        print("De computer heeft gewonnen")
-computer()
+        print("De computer heeft gewonnen :[")

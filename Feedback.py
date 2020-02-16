@@ -3,6 +3,7 @@ def feedback(gok_list, passw):
     zwart = zwart_pin(gok_list, passw)
     return wit, zwart
 
+
 def wit_pin(gok_list, passw):
     wit = 0
     wit_list = passw[:]
@@ -11,6 +12,7 @@ def wit_pin(gok_list, passw):
             wit_list.remove(w)
             wit = wit + 1
     return wit
+
 
 def zwart_pin(gok_list, passw):
     zwart = 0
