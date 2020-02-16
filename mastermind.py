@@ -3,11 +3,10 @@ import random
 from Feedback import feedback
 from Computer import computer
 
-
+passw = []
+while len(passw) < 4:
+    passw.append(random.randint(1, 6))
 def secret():
-    passw = []
-    while len(passw) < 4:
-        passw.append(random.randint(1, 6))
     gok = str(input("Raad 4 getallen tussen de 1 en 6: "))
     gok_list = [int(i) for i in gok]
     while True:
@@ -28,7 +27,8 @@ def secret():
             # tel -= 1
             # print(feedback(gok_list, passw), "= (wit, zwart)", "\n", tel, "pogingen over")
             print(feedback(gok_list, passw), "= (wit, zwart)")
-            secret()
+            print(passw)
+            secret() # maakt nieuwe secret aan :(
             break
 
 
@@ -46,6 +46,6 @@ def menu():
               "\n\n***Bij de gamemode -Wees de gamemaster- mag uzelf een 4 cijferige code opmaken "
               "en raadt de computer d.m.v. algoritmes."
               "\nLukt dat de computer niet in 10 pogingen dan bent u de winnaar!")
-
-
 menu()
+
+# Samengewerkt met Berke en Achraf

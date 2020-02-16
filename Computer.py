@@ -27,6 +27,7 @@ def computer():
         verg_feedback = feedback(i, eerste_gok)
         if verg_feedback != eerste_feedback:
             clean_list.remove(i)
+            print(eerste_gok)
         else:
             time.sleep(1)
             print("Geraden in", pogingen, "poging(en).")
