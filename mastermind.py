@@ -1,7 +1,7 @@
 # Imports
 import random
-from Feedback import feedback
-from Computer import computer
+from Feedback import pins
+from Heuristiek import computer
 
 passw = []
 while len(passw) < 4:
@@ -26,9 +26,9 @@ def secret():
         elif gok_list != passw:
             # tel -= 1
             # print(feedback(gok_list, passw), "= (wit, zwart)", "\n", tel, "pogingen over")
-            print(feedback(gok_list, passw), "= (wit, zwart)")
+            print(pins(gok_list, passw), "= (zwart, wit)")
             print(passw)
-            secret() # maakt nieuwe secret aan :(
+            secret()
             break
 
 
@@ -48,4 +48,3 @@ def menu():
               "\nLukt dat de computer niet in 10 pogingen dan bent u de winnaar!")
 menu()
 
-# Samengewerkt met Berke en Achraf

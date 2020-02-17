@@ -1,6 +1,6 @@
 import time
 import random
-from Feedback import feedback
+from Feedback import pins
 
 
 def computer():
