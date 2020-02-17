@@ -2,7 +2,6 @@ import time
 import random
 from Feedback import feedback
 
-
 def computer():
     password = []
     secret = input("Maak een geheime code aan met 4 getallen tussen de 1 en 6: ")
@@ -37,3 +36,29 @@ def computer():
         print("U heeft gewonnen!")
     if pogingen < 11:
         print("De computer heeft gewonnen :[")
+    print(mogelijkheden)
+
+def heuristiek(xxx):
+    set_xxx = set(xxx)
+    length = len(set_xxx)
+    xxx.append(length)
+    return xxx
+
+def make_list():
+    list = []
+    for i in range(1, 7):
+        for j in range(1, 7):
+            for k in range(1, 7):
+                for l in range(1, 7):
+                    this_code = [i, j, k, l]
+                    updated_code = heuristiek(this_code)
+                    list.append(updated_code)
+    sorted_list = []
+    for j in range(4, 0, -1):
+        for x in list:
+            if x[4] == j:
+                sorted_list.append(x[0:4])
+    print(sorted_list)
+    return sorted_list
+make_list()
+
