@@ -37,3 +37,7 @@ def zwart_pin(gok_list, passw):
 #                 if gok_list[i] == passw[j]:
 #                     wit += 1
 #     return zwart, wit
+
+#-------------------------------------------------------------------------------------------------------------------------
+#code is super strak en ziet er duidelijk uit, ook kandig dat je de feedback in een los document gemaakt hebt, dat maakt het erg overzichtelijk.
+#verder niet zo veel op aan te merken zier er vlekkeloos uit :)
