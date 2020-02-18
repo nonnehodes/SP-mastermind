@@ -25,7 +25,7 @@ def make_list():
     return sorted_list
 
 
-def algoritme1():
+def algoritme1():                                                               #het is handig om hier aan te geven welke strategie het is 
     secret = input("Maak een geheime code aan met 4 getallen tussen de 1 en 6: ")
     secret_list = [int(i) for i in secret] # input in list zetten
     for x in secret_list:
@@ -42,7 +42,7 @@ def algoritme1():
     pogingen = 0
     gok = 0
     while gok != 1:
-        pogingen = pogingen + 1
+        pogingen = pogingen + 1                                                 # pogingen += 1 is miss netter?
         eerste_gok = mogelijkheden[0]
         eerste_feedback = pins(eerste_gok, secret_list)
         if eerste_feedback == (4, 0): # feedback gebruiken om te checken of het is geraden
@@ -59,3 +59,6 @@ def algoritme1():
         print("U heeft gewonnen!", eerste_gok) # eerste_gok printen ter controle of de code echt is geraden
     if pogingen < 11:
         print("De computer heeft gewonnen :[", eerste_gok) # eerste_gok printen ter controle of de code echt is geraden
+        
+# code is goed leesbaar en ziet er strak uit, wel denk ik dat het gandig is om duidelijk op te schrijven welke van de strategiën het is. 
+# 
