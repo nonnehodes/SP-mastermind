@@ -5,7 +5,7 @@ from Heuristiek import algoritme1
 
 passw = []
 while len(passw) < 4:
-    passw.append(random.randint(1, 6))
+    passw.append(random.randint(1, 6))      #lekker simpel, en netjes
 def secret():
     gok = str(input("Raad 4 getallen tussen de 1 en 6: "))
     gok_list = [int(i) for i in gok]
@@ -32,7 +32,7 @@ def secret():
             break
 
 
-def menu():
+def menu():                     #heel mooi gedaan dit!
     keuze = input(
         "Welkom bij Mastermind! Kies een gamemode. \n[a] Raad de geheime code \n[b] Wees de gamemaster \n[c] Spelregels\n")
     if keuze.lower() == "a":
@@ -40,7 +40,7 @@ def menu():
     elif keuze.lower() == "b":
         algoritme1()
     elif keuze.lower() == "c":
-        print("\n***Bij de gamemode -Raad de geheime code- wordt er een 4 cijferige code "
+        print("\n***Bij de gamemode -Raad de geheime code- wordt er een 4 cijferige code "      #handig dat je er een uitleg bij geeft
               "gegenereerd en is het aan u de taak om deze binnen 10 pogingen te raden."
               "\nLukt dat niet dan heeft de computer gewonnen.***"
               "\n\n***Bij de gamemode -Wees de gamemaster- mag uzelf een 4 cijferige code opmaken "
@@ -48,3 +48,5 @@ def menu():
               "\nLukt dat de computer niet in 10 pogingen dan bent u de winnaar!")
 menu()
 
+#code ziet er strak uit en is makkelijk leesbaar. 
+#netjes dat er een menu in zit :)
