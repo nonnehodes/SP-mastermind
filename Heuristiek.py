@@ -25,10 +25,9 @@ def make_list():
     return sorted_list
 
 
-def computer():
-    password = []
+def algoritme1():
     secret = input("Maak een geheime code aan met 4 getallen tussen de 1 en 6: ")
-    secret_list = [int(i) for i in secret]
+    secret_list = [int(i) for i in secret] # input in list zetten
     for x in secret_list:
         if x > 6 or x < 1:
             secret = input("Maak een geheime code aan met 4 getallen tussen de 0 en 6: ")
@@ -39,7 +38,6 @@ def computer():
     print("Uw geheime code is", secret_list)
     time.sleep(1)
     print("De computer gaat nu beginnen met raden.")
-
     mogelijkheden = make_list()
     pogingen = 0
     gok = 0
@@ -47,20 +45,17 @@ def computer():
         pogingen = pogingen + 1
         eerste_gok = mogelijkheden[0]
         eerste_feedback = pins(eerste_gok, secret_list)
-        if eerste_feedback == (4, 0):
-            gok = 1
+        if eerste_feedback == (4, 0): # feedback gebruiken om te checken of het is geraden
+            gok = 1 # waarde van gok gebruiken om te bepalen of het is geraden
             break
         for i in mogelijkheden:
             verg_feedback = pins(i, eerste_gok)
             if verg_feedback != eerste_feedback:
                 mogelijkheden.remove(i)
-        print(eerste_gok)
-
     time.sleep(1)
     print("Geraden in", pogingen, "poging(en).")
     time.sleep(1)
     if pogingen > 10:
-        print("U heeft gewonnen!")
+        print("U heeft gewonnen!", eerste_gok) # eerste_gok printen ter controle of de code echt is geraden
     if pogingen < 11:
-        print("De computer heeft gewonnen :[")
-computer()
+        print("De computer heeft gewonnen :[", eerste_gok) # eerste_gok printen ter controle of de code echt is geraden

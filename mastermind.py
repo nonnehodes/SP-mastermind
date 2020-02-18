@@ -1,7 +1,7 @@
 # Imports
 import random
 from Feedback import pins
-from Heuristiek import computer
+from Heuristiek import algoritme1
 
 passw = []
 while len(passw) < 4:
@@ -38,7 +38,7 @@ def menu():
     if keuze.lower() == "a":
         secret()
     elif keuze.lower() == "b":
-        computer()
+        algoritme1()
     elif keuze.lower() == "c":
         print("\n***Bij de gamemode -Raad de geheime code- wordt er een 4 cijferige code "
               "gegenereerd en is het aan u de taak om deze binnen 10 pogingen te raden."

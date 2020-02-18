@@ -23,8 +23,8 @@ def computer():
     for i in mogelijkheden:
         pogingen = pogingen + 1
         eerste_gok = random.choice(mogelijkheden)
-        eerste_feedback = feedback(eerste_gok, secret_list)
-        verg_feedback = feedback(i, eerste_gok)
+        eerste_feedback = pins(eerste_gok, secret_list)
+        verg_feedback = pins(i, eerste_gok)
         if verg_feedback != eerste_feedback:
             clean_list.remove(i)
             print(eerste_gok)
@@ -34,6 +34,7 @@ def computer():
             time.sleep(1)
             break
     if pogingen > 10:
-        print("U heeft gewonnen!")
+        print("U heeft gewonnen!", eerste_gok)
     if pogingen < 11:
-        print("De computer heeft gewonnen :[")
+        print("De computer heeft gewonnen :[", eerste_gok)
+computer()
