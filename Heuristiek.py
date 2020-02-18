@@ -54,6 +54,7 @@ def computer():
             verg_feedback = pins(i, eerste_gok)
             if verg_feedback != eerste_feedback:
                 mogelijkheden.remove(i)
+        print(eerste_gok)
 
     time.sleep(1)
     print("Geraden in", pogingen, "poging(en).")
@@ -62,5 +63,4 @@ def computer():
         print("U heeft gewonnen!")
     if pogingen < 11:
         print("De computer heeft gewonnen :[")
-
 computer()
